@@ -1,0 +1,41 @@
+void main()
+  
+{
+
+ int a=7;        
+ print('Tabla del: $a');
+ for(int j = 1; j<=10; j++)
+   {
+     print('$a * $j = ${a*j}');  
+   }
+ int b=4;
+ int resu = 1;
+   for(int i = 1; i<=b; i++)
+      {
+          resu=resu*i;
+      }
+    print('el factorial es: $resu');
+   String nombre = 'Oscar'+' '+'Velasquez';
+    var frase = 'Este es mi nombre en mayúsculas: ${nombre.toUpperCase()}';
+    var frase1 = 'Este es mi nombre todo en minúsculas: ${nombre.toLowerCase()}';         print(frase);
+    print(frase1);
+   final Datos =new Const('Oscar','Velasquez','Soltero');
+     
+     print(Datos.nombre);
+     print(Datos.apellido);
+     print(Datos.estado);
+}
+class Const
+{
+  String nombre,apellido,estado;
+  Const(String nombre, String apellido, String estado)
+  {
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.estado=estado;
+  }
+  
+}
+
+      
+     

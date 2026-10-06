@@ -1,0 +1,60 @@
+import 'dart:io';
+void main() 
+{ int opcion;
+  do
+  {
+   
+   stdout.write("selecccione una opgion de 1 a 3");
+   stdout.write("1. tablas de multiplicar");
+   stdout.write("2. factorial de un numero entero ");
+   stdout.write("3. Datos personales");
+   stdout.write("4. Nombre en mayusculas o minusculas");
+   opcion = int.parse(stdin.readLineSync());
+  switch (opcion)
+        {
+            case 1:
+             int a;
+             stdout.write("ingrese numero de la tabla");
+             a = int.parse(stdin.readLineSync());
+             print('Tabla del: $a');
+             for(int j = 1; j<=10; j++)
+               {
+                 print('$a * $j = ${a*j}');
+               }
+            break;
+            case 2:
+             int b;
+             int resu = 1;
+             stdout.write("digite un nemero entero");
+             b = int.parse(stdin.readLineSync());   
+             for(int i = 1; i<=b; i++)
+              {
+                resu=resu*i;
+              }
+            print('El factorial es: $resu');
+            break;
+            case 3:
+             stdout.write('Ingrese su nombre por favor');
+             String nombre = stdin.readLineSync();
+             var frase = 'Este es mi nombre en mayúsculas: ${nombre.toUpperCase()}';
+             var frase1 = 'Este es mi nombre todo en minúsculas: ${nombre.toLowerCase()}';                  print(frase);
+             print(frase1);
+            break;
+            case 4:
+             final Datos =new Const('Oscar','Velasquez','Soltero');     
+             print(Datos.nombre);
+             print(Datos.apellido);
+             print(Datos.estado);
+      }    
+        
+    } while(opcion!=5);    
+}
+ class Const
+{
+  String nombre,apellido,estado;
+  Const(String nombre, String apellido, String estado)
+  {
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.estado=estado;
+  }

@@ -1,0 +1,1038 @@
+package trabajopascua;
+
+import java.util.Scanner;
+
+public class Trabajopascua 
+{
+    public static void main(String[] args)
+    {
+        Scanner sn = new Scanner(System.in);
+        System.out.println("selecccione una opgion de 1 a 23");
+        System.out.println("1. tablas de multiplicar");
+        System.out.println("2. factorial de un numero entero ");
+        System.out.println("3. serie fobonacci ");
+        System.out.println("4. contar numeros enteros");
+        System.out.println("5. comision de ventas");
+        System.out.println("6. menor y mayor de 5 numeros");
+        System.out.println("7. salario semanal");
+        System.out.println("8. articulo con descuento");
+        System.out.println("9. diagrama de flujo de tre valores");
+        System.out.println("10. aumentos de salario");
+        System.out.println("11. cajero de banco");
+        System.out.println("12. N numero de dias");
+        System.out.println("13. simular calculadora");
+        System.out.println("14. categoria de un numero");
+        System.out.println("15. total devengado");
+        System.out.println("16. calificasion final de una materia");
+        System.out.println("17. valor de venta");
+        System.out.println("18. aprovar o reprovar el curso");
+        System.out.println("19. sembrar arboles");
+        System.out.println("20. leer dos numeros");
+        System.out.println("21. concepto de horas extras");
+        System.out.println("22. utilidad del reparto");
+        System.out.println("23. salir");
+        int opcion = sn.nextInt();
+        if(opcion==1)
+        {
+           herencia tablas =new herencia();
+           tablas.herencia1();
+           return;
+        }
+        else
+        if(opcion==2)
+        {
+            herencia factorial=new herencia();
+            factorial.herencia3();
+            return;
+        }
+        else
+        if(opcion==3)
+        {
+           herencia fibonacci=new herencia();
+           fibonacci.herencia2();
+           return;  
+        }
+        else
+        if(opcion==4)
+        {
+            herencia contarnumeros=new herencia();
+            contarnumeros.herencia4();
+            return;
+        }
+        else
+        if(opcion==5)
+        {
+           herencia comparacion=new herencia();
+           comparacion.herencia5();
+           return;
+        }
+        else
+        if(opcion==6)
+        {
+            constructores comision =new constructores(2000000);
+            comision.datos();
+            return;
+        }
+        else
+        if(opcion==7)
+        {
+            constructores salario =new constructores(80,1);
+            salario.datos2();
+            return;
+
+        }
+        else
+        if(opcion==8)
+        {
+            constructores descuentos=new constructores(10000,3,"juguete");
+            descuentos.datos1(); 
+            return;
+        }
+        else
+        if(opcion==9)
+        {
+            getsetpolimorfismo punto5 = new getsetpolimorfismo(); 
+            punto5.getsetpolimorfismo1(); 
+            return;
+        }
+        else
+        if(opcion==10)
+        {
+            getsetpolimorfismo punto7 = new getsetpolimorfismo(); 
+            punto7.getsetpolimorfismo2(); 
+            return;
+        }
+        else
+        if(opcion==11)
+        {
+            getsetpolimorfismo punto9 = new getsetpolimorfismo(); 
+            punto9.getsetpolimorfismo3(); 
+            return;
+        }
+        else
+        if(opcion==12)
+        {
+            getsetpolimorfismo punto10 = new getsetpolimorfismo(); 
+            punto10.getsetpolimorfismo4(); 
+            return;
+        }
+        else
+        if(opcion==13)
+        {
+            getsetpolimorfismo punto11 = new getsetpolimorfismo(); 
+            punto11.getsetpolimorfismo5(); 
+            return;
+        }
+        else
+        if(opcion==14)
+        {
+            getsetpolimorfismo punto12= new getsetpolimorfismo(); 
+            punto12.getsetpolimorfismo6(); 
+            return;
+        }
+        else
+        if(opcion==15)
+        {
+            getsetpolimorfismo punto13 = new getsetpolimorfismo(); 
+            punto13.getsetpolimorfismo7();
+            return;
+        }
+        else
+        if(opcion==16)
+        {
+            getsetpolimorfismo punto14 = new getsetpolimorfismo(); 
+            punto14.getsetpolimorfismo8(); 
+            return;
+        }
+        else
+        if(opcion==17)
+        {
+            getsetpolimorfismo punto15 = new getsetpolimorfismo(); 
+            punto15.getsetpolimorfismo9(); 
+            return;
+        }
+        else
+            
+        if(opcion==18)
+        {
+            getsetpolimorfismo punto16 = new getsetpolimorfismo(); 
+            punto16.getsetpolimorfismo10(); 
+            return;
+        }
+        else
+        if(opcion==19)
+        {
+            getsetpolimorfismo punto19 = new getsetpolimorfismo(); 
+            punto19.getsetpolimorfismo11(); 
+            return;
+        }
+        else
+        if(opcion==20)
+        {
+            getsetpolimorfismo punto20 = new getsetpolimorfismo(); 
+            punto20.getsetpolimorfismo12(); 
+            return;
+        }
+        else
+        if(opcion==21)
+        {
+            getsetpolimorfismo punto21 = new getsetpolimorfismo(); 
+            punto21.getsetpolimorfismo13(); 
+            return;
+        }
+        else 
+        if(opcion==22)
+        {
+            getsetpolimorfismo punto22 = new getsetpolimorfismo(); 
+            punto22.getsetpolimorfismo14(); 
+            return;
+        }
+        else
+        if(opcion==23)
+        {
+            System.out.println("salir");
+        }
+    }    
+}
+package trabajopascua;
+
+import java.util.Scanner;
+
+public class constructores 
+
+{
+    Scanner sn = new Scanner(System.in);
+    private double venta,comision;
+    private int precio,preciofinal,clave,horas,semanas,trabajada,total,horaext;
+    private String nombre;
+    public Scanner getSn() 
+    {
+        return sn;
+    }
+    public void setSn(Scanner sn)
+    {
+        this.sn = sn;
+    }
+    public double getVenta()
+    {
+        return venta;
+    }
+    public void setVenta(double venta)  
+    {
+        this.venta = venta;
+    }
+    public double getComision()
+    {
+        return comision;
+    }
+    public void setComision(double comision)
+    {
+        this.comision = comision;
+    }
+    public int getPrecio()
+    {
+        return precio;
+    }
+    public void setPrecio(int precio)
+    {
+        this.precio = precio;
+    }
+    public int getPreciofinal()
+    {
+        return preciofinal;
+    }
+    public void setPreciofinal(int preciofinal)
+    {
+        this.preciofinal = preciofinal;
+    }
+    public int getClave() 
+    {
+        return clave;
+    }
+    public void setClave(int clave) 
+    {
+        this.clave = clave;
+    }
+    public int getHoras()
+    {
+        return horas;
+    }
+    public void setHoras(int horas) 
+    {
+        this.horas = horas;
+    }
+    public int getSemanas()
+    {
+        return semanas;
+    }
+    public void setSemanas(int semanas)
+    {
+        this.semanas = semanas;
+    }
+    public int getTrabajada()
+    {
+        return trabajada;
+    }
+    public void setTrabajada(int trabajada)
+    {
+        this.trabajada = trabajada;
+    }
+    public int getTotal()
+    {
+        return total;
+    }
+    public void setTotal(int total)
+    {
+        this.total = total;
+    }
+    public int getHoraext()
+    {
+        return horaext;
+    }
+    public void setHoraext(int horaext)
+    {
+        this.horaext = horaext;
+    }
+    public String getNombre()
+    {
+        return nombre;
+    }
+    public void setNombre(String nombre)
+    {
+        this.nombre = nombre;
+    }
+    constructores(double vent)
+    { 
+    this.venta=vent;
+    } 
+    void datos()
+    {
+        if(venta<1000000)
+        {
+            comision=(venta*2.5)/100;
+            System.out.println("el total de la comision es: "+ comision);
+        }
+        else
+        if((venta>=1000000)&&(venta<3000000))   
+        {
+            comision=(venta*3)/100;
+            System.out.println("el total de la comision es: "+ comision);
+        }
+        else
+         if((venta>=3000000)&&(venta<5000000))   
+        {
+            comision=(venta*4.5)/100;
+            System.out.println("el total de la comision es: "+ comision);
+        }
+        else
+        if(venta>=5000000)
+        {
+            comision=(venta*5)/100;
+            System.out.println("el total de la comision es: "+ comision);
+        }
+    }
+    constructores(int pre,int clav,String nomb)
+    {
+        this.precio=pre;       
+        this.clave=clav;
+        this.nombre=nomb;
+    }
+    void datos1()
+    {
+        if ((clave>3)||(clave<0))
+        {
+           System.out.println("la clave es incorrecta");
+        }
+        else
+        if(clave==0)
+        {
+           System.out.println("clave No. "+clave+"."+ "\nel producto con el nombre "+nombre+ "\ncon valor de: "+precio+ "pesos"+"\nel producto no tiene descuento");
+        }
+        else
+        if(clave==1)
+        {
+           preciofinal=(precio*10)/100;
+           System.out.println("clave No. "+clave+"."+ "\nel producto con el nombre "+nombre+"\ncon valor de: "+precio+ "pesos"+"\ntiene un descuento de: "+preciofinal+ "pesos");
+        }
+        else
+        if(clave==2)
+        {
+           preciofinal=(precio*20)/100;
+           System.out.println("clave No. "+clave+"."+ "\nel producto con el nombre "+nombre+"\ncon valor de: "+precio+ "pesos"+"\ntiene un descuento de: "+preciofinal+ "pesos");
+        }
+        else
+        if(clave==3)
+        {
+           preciofinal=(precio*25)/100;
+           System.out.println("clave No. "+clave+"."+ "\nel producto con el nombre "+nombre+"\ncon valor de: "+precio+ "pesos"+"\ntiene un descuento de: "+preciofinal +"pesos");
+        }
+    }
+    constructores(int h,int sema)
+    {
+        this.horas=h;
+        this.semanas=sema;
+    }
+    void datos2()
+    {
+        if(horas<=40)
+        {
+            total=(horas*10000)*semanas;
+            System.out.println("el total a pagar es de: "+total);
+        }
+        else
+        if(horas>40)
+        {
+            trabajada=40*10000;
+            horas=horas-40;
+            total=(horas*15000)+trabajada;
+            horaext=total*semanas;
+            System.out.println("el total a pagar es de: "+horaext+"\nlas horas extras fueron: "+horas);
+        }
+    } 
+}
+package trabajopascua;
+
+import java.util.Scanner;
+
+public class herencia 
+{
+    public herencia (){}
+    Scanner sn = new Scanner(System.in);
+    private int suma,limite,num;
+    private int cantidad=0,pares=0,num1 = 0,num2 = 1,resu=1;
+    private int valor1,valor2,valor3,valor4,valor5;
+    public Scanner getSn()
+    {
+        return sn;
+    }
+    public void setSn(Scanner sn)
+    {
+        this.sn = sn;
+    }
+    public int getSuma()
+    {
+        return suma;
+    }
+    public void setSuma(int suma)
+    {
+        this.suma = suma;
+    }    
+    public int getLimite()
+    {
+        return limite;
+    }
+    public void setLimite(int limite)
+    {
+        this.limite = limite;
+    }
+    public int getNum()
+    {
+        return num;
+    }
+    public void setNum(int num)
+    {
+        this.num = num;
+    }
+    public int getCantidad()
+    {
+        return cantidad;
+    }   
+    public void setCantidad(int cantidad) 
+    {
+        this.cantidad = cantidad;
+    }
+    public int getPares() 
+    {
+        return pares;
+    }
+    public void setPares(int pares)
+    {
+        this.pares = pares;
+    }
+    public int getNum1() 
+    {
+        return num1;
+    }
+    public void setNum1(int num1) 
+    {
+        this.num1 = num1;
+    }
+    public int getNum2() 
+    {
+        return num2;
+    }
+    public void setNum2(int num2)
+    {
+        this.num2 = num2;
+    }
+    public int getResu()
+    {
+        return resu;
+    }
+    public void setResu(int resu)
+    {
+        this.resu = resu;
+    }
+    public int getValor1()
+    {
+        return valor1;
+    }
+
+    public void setValor1(int valor1) 
+    {
+        this.valor1 = valor1;
+    }
+    public int getValor2() 
+    {
+        return valor2;
+    }
+    public void setValor2(int valor2)
+    {
+        this.valor2 = valor2;
+    }
+    public int getValor3()
+    {
+        return valor3;
+    }
+    public void setValor3(int valor3) 
+    {
+        this.valor3 = valor3;
+    }
+    public int getValor4()
+    {
+        return valor4;
+    }
+    public void setValor4(int valor4)
+    {
+        this.valor4 = valor4;
+    }
+    public int getValor5()
+    {
+        return valor5;
+    }
+    public void setValor5(int valor5)
+    {
+        this.valor5 = valor5;
+    }
+    public void herencia1()
+    {
+        System.out.println("ingrese numero de la tabla");
+        num1 = sn.nextInt();
+        System.out.println("Tabla del " + num1);
+        for(int j = 1; j<=10; j++)
+        {
+        System.out.println(num1 + " * " + j + " = " + num1*j);
+        }
+    }
+    public void herencia2()
+    {
+        System.out.println("ingrese la catidad de numeros que quiere conocer");
+        limite = sn.nextInt();
+        for(int i=0;i<=limite;i++) 
+        {
+        suma = num1;
+        num1 = num2;
+        num2 = suma + num1;
+        System.out.println(" EL numero es"+suma);
+        }
+
+    }
+    public void herencia3()
+    {
+        System.out.println("digite un nemero entero");
+        num = sn.nextInt();
+        resu=1;
+        for(int i = 1; i<=num; i++)
+        {
+            resu=resu*i;
+        }
+        System.out.println("el factorial es: " + resu);
+    }
+    public void herencia4()
+    {
+        System.out.print("Introduce el primer numero ");
+        num1=sn.nextInt();
+        System.out.print("Introduce el segundo numero ");
+        num=sn.nextInt();
+        if(num1<num2)
+        {
+            for(int i=num1;i<=num;i++)
+            {
+                System.out.println("Numero:"+i);
+                cantidad++;
+                if((i%2)==0)
+                {
+                pares++;
+                }
+            }
+        }
+        else
+        if(num1>num2)
+        {
+           for(int i=num2;i<=num1;i++)
+            {
+                System.out.println("Numero:"+i);
+                cantidad++;
+                if((i%2)==0)
+                {
+                pares++;
+                }
+            }
+        }
+        System.out.println("Hay: "+cantidad +" numeros");
+        System.out.println("De los cuales : "+pares+" son pares");
+    }
+    public void herencia5()
+    {
+        System.out.println("Ingrese el primer valor");
+        valor1 = sn.nextInt();
+        System.out.println("Ingrese el segundo valor");
+        valor2 = sn.nextInt();
+        System.out.println("Ingrese el tercer valor");
+        valor3 = sn.nextInt();
+        System.out.println("Ingrese el cuarto valor");
+        valor4 = sn.nextInt();
+        System.out.println("Ingrese el quinto valor");
+        valor5 = sn.nextInt();
+        if((valor1>valor2)&&(valor1>valor3)&&(valor1>valor4)&&(valor1>valor5)&&(valor5<valor2)&&(valor5<valor3)&&(valor5<valor4)&&(valor5<valor1))
+        {
+           System.out.println("El Numero Mayor es : "+valor1); 
+           System.out.println("El Numero Menor es : "+valor5);
+        }
+        else
+        if((valor2>valor1)&&(valor2>valor3)&&(valor2>valor4)&&(valor2>valor5)&&(valor5<valor2)&&(valor5<valor3)&&(valor5<valor4)&&(valor5<valor1))
+        {
+            System.out.println("El Numero Mayor es : "+valor2); 
+            System.out.println("El Numero Menor es : "+valor5);
+        }
+        else
+         if((valor3>valor1)&&(valor3>valor2)&&(valor3>valor4)&&(valor3>valor5)&&(valor5<valor2)&&(valor5<valor3)&&(valor5<valor4)&&(valor5<valor1))
+        {
+            System.out.println("El Numero Mayor es : "+valor3); 
+            System.out.println("El Numero Menor es : "+valor5);
+        }
+         else
+         if((valor4>valor1)&&(valor4>valor2)&&(valor4>valor3)&&(valor4>valor5)&&(valor5<valor2)&&(valor5<valor3)&&(valor5<valor4)&&(valor5<valor1))
+        {
+            System.out.println("El Numero Mayor es : "+valor4); 
+            System.out.println("El Numero Menor es : "+valor5);
+        }
+         else
+        if((valor5>valor1)&&(valor5>valor2)&&(valor5>valor3)&&(valor5>valor4)&&(valor1<valor2)&&(valor1<valor3)&&(valor1<valor4)&&(valor1<valor5))
+        {
+            System.out.println("El Numero Mayor es : "+valor5); 
+            System.out.println("El Numero Menor es : "+valor1);
+        }   
+    }
+}
+package trabajopascua;
+
+import java.util.Scanner;
+
+public class getsetpolimorfismo
+{
+    public getsetpolimorfismo(){}
+    Scanner sn = new Scanner(System.in);
+    private int num1,num2,num3,num4,num5,num6;
+    private float nu1,nu2,nu3,nu4,nu5,nu6;
+    private double n3;
+    public Scanner getSn()
+    {
+        return sn;
+    }
+    public void setSn(Scanner sn)
+    {
+        this.sn = sn;
+    }
+    public int getNum1()
+    {
+        return num1;
+    }
+    public void setNum1(int num1) 
+    {
+        this.num1 = num1;
+    }
+    public int getNum2() {
+        return num2;
+    }
+    public void setNum2(int num2) 
+    {
+        this.num2 = num2;
+    }
+    public int getNum3() 
+    {
+        return num3;
+    }
+    public void setNum3(int num3)
+    {
+        this.num3 = num3;
+    }
+     public int getNum4() 
+    {
+        return num4;
+    }
+    public void setNum4(int num4)
+    {
+        this.num4 = num4;
+    }
+    public int getNum5() 
+    {
+        return num5;
+    }
+    public void setNum5(int num5)
+    {
+        this.num5 = num5;
+    }
+    public int getNum6() 
+    {
+        return num6;
+    }
+    public void setNum6(int num6)
+    {
+        this.num6 = num6;
+    }
+     public float getNu1()
+    {
+        return nu1;
+    }
+    public void setNu1(int nu1) 
+    {
+        this.nu1 = nu1;
+    }
+    public float getNu2() {
+        return nu2;
+    }
+    public void setNum2(float nu2) 
+    {
+        this.nu2 = nu2;
+    }
+    public float getNu3() 
+    {
+        return nu3;
+    }
+    public void setNu3(float nu3)
+    {
+        this.nu3 = nu3;
+    }
+     public float getNu4() 
+    {
+        return nu4;
+    }
+    public void setNum4(float nu4)
+    {
+        this.nu4 = nu4;
+    }
+    public float getNu5() 
+    {
+        return nu5;
+    }
+    public void setNu5(float nu5)
+    {
+        this.nu5 = nu5;
+    }
+    public float getNu6() 
+    {
+        return nu6;
+    }
+    public void setNu6(float nu6)
+    {
+        this.nu6 = nu6;
+    }
+     public double getN3() 
+    {
+        return n3;
+    }
+    public void setN3(double n3)
+    {
+        this.n3 = n3;
+    }
+  
+    public void getsetpolimorfismo1()
+    {
+        System.out.println("ingrese el primer numero");
+        num1 = getSn().nextInt();
+        System.out.println("ingrese el segundo numero numero");
+        num2 = getSn().nextInt();
+        System.out.println("ingrese el tercer numero");
+        num3 = getSn().nextInt();
+        System.out.println("el orden de los numeros es: "+ num3+","+num2+","+
+        num1);
+    }
+    public void getsetpolimorfismo2()
+    {
+        System.out.println("Elija la categoria para el aumento salarial");
+        System.out.println("1.Sindicalizado");
+        System.out.println("2.De confianza");
+        System.out.println("3.Alto directivo");
+        System.out.println("4.Ejecutivo");
+        num1= sn.nextInt();
+        System.out.println("ingrese el salario actual");
+        num2 = sn.nextInt();
+        if(num1==1)
+        {
+            num3=(num2*20)/100;
+            num4=num3+num2;
+            System.out.println("El nuevo salario es: "+num4);
+        }
+        else
+        if(num1==2)
+        {
+            num3=(num2*10)/100;
+            num4=num3+num2;
+            System.out.println("El nuevo salario es: "+num4);
+        }
+        else
+        if(num1==3)
+        {
+            num3=(num2*5)/100;
+            num4=num3+num2;
+            System.out.println("El nuevo salario es: "+num4);
+        }
+        else
+        if(num1==4)
+        {
+            num3=(num2*2)/100;
+            num4=num3+num2;
+            System.out.println("El nuevo salario es: "+num4);
+        } 
+    }
+    public void getsetpolimorfismo3()
+    {
+        int num1;      
+    }
+    public void getsetpolimorfismo4()
+    {
+        System.out.println("ingrese el numero para calcular dias,meses,años");
+        num1 = sn.nextInt();
+        if(num1>=365)
+        {
+            num2=num1/365;
+            num3=num1/30;
+            System.out.println("son: "+num2+"años"+","+num3+"meses"+","+num1+"dias");
+        }
+        else
+        if(num1<365)
+        {
+            num3=num1/30;
+            System.out.println("son: "+num3+"meses"+","+num1+"dias");
+        }
+        else
+        if(num1<=29)
+        {
+           System.out.println("son: "+num1+"dias");
+        }
+    }
+    public void getsetpolimorfismo5()
+    {
+        System.out.println("ingrese el primer numero");
+        num1 = sn.nextInt();
+        System.out.println("ingrese el segundo numero numero");
+        num2 = sn.nextInt();
+        if(num1>num2)
+        {
+        num5=num1+num2; 
+        num6=num1-num2;
+        num3=num1*num2;
+        num4=num1/num2;
+        System.out.println("el total de la suma es: "+num5+"\n"+"el total de la resta es: "+num6+"\n"+"el total de la multiplicasion es: "+num3+"\n"+"el total de la division es: "+num4);
+        }
+        else
+        if(num2>num1)
+        {
+        num5=num2+num1; 
+        num6=num2-num1;
+        num3=num2*num1;
+        num4=num2/num1;
+        System.out.println("el total de la suma es: "+num5+"\n"+"el total de la resta es: "+num6+"\n"+"el total de la multiplicasion es: "+num3+"\n"+"el total de la division es: "+num4);
+        }     
+    }
+    public void getsetpolimorfismo6()
+    {
+        System.out.println("ingrese el numero a categotizar");
+        num1 = sn.nextInt();
+        if((num1<=2)&&(num1>=0))
+        {
+            System.out.println("el numero pertenece a la categoria A");
+        }
+        else
+        if((num1<=6)&&(num1>=3))
+        {
+            System.out.println("el numero pertenece a la categoria B");
+        }
+        else   
+        if((num1==7)||(num1==8))
+        {
+            System.out.println("el numero pertenece a la categoria C");
+        }
+        else
+        if(num1==9)
+        {
+            System.out.println("el numero pertenece a la categoria D");
+        }
+        else
+        if((num1<0)||(num1>9))
+        {
+            System.out.println("el numero no pertenece a ninguna categoria");
+        }
+           
+    }
+    public void getsetpolimorfismo7()
+    {
+        System.out.println("ingrese el valor del salario base");
+        num1 = sn.nextInt();
+        System.out.println("ingrese el valor de las ventas");
+        num2 = sn.nextInt();
+        num3=(num2*10)/100;
+        num4=(num1+num3);
+        System.out.println("El total devengado es: "+num4);
+    }
+    public void getsetpolimorfismo8()
+    {
+        System.out.println("ingrese la nota del primer corte");
+        nu1 = sn.nextFloat();
+        System.out.println("ingrese la nota del segundo corte");
+        nu2 = sn.nextFloat();
+        System.out.println("ingrese la nota del tercer corte");
+        nu3 = sn.nextFloat();
+        System.out.println("ingrese la nota del examen final");
+        nu4 = sn.nextFloat();
+        System.out.println("ingrese la nota de los trabajos y tareas");
+        nu5 = sn.nextFloat();
+        nu6=((((nu1+nu2+nu3)/3)*55)/100)+((nu4*30)/100)+((nu5*15)/100);
+        System.out.println("La calificasion final es: "+nu6);
+    }
+    public void getsetpolimorfismo9()
+    {
+        System.out.println("ingrese el valor del articulo comprado");
+        num1 = sn.nextInt();
+        num2=(num1*30)/100;
+        num3=num1+num2;
+        System.out.println("El valor del articulo para la venta es de: "+num3);
+    }
+    public void getsetpolimorfismo10()
+    {
+        System.out.println("ingrese la primera calificasion");
+        num1 = sn.nextInt();
+        System.out.println("ingrese la segunda calificasion");
+        num2 = sn.nextInt();
+        System.out.println("ingrese la tercera calificasion");
+        num3 = sn.nextInt();
+        num4=(num1+num2+num3)/3;
+        if((num4>=0)&&(num4<=70))
+        {
+            System.out.println("El estudiante reprobo el curso");
+        }
+        else
+        if((num4>70)&&(num4<=100))
+        {
+            System.out.println("El estudiante aprobo el curso");
+        } 
+    }
+    public void getsetpolimorfismo11()
+    {
+        System.out.println("ingrese el numero de hectarias del terreno");
+        nu1 = sn.nextFloat();
+        if(nu1>1000000)
+        {
+            nu2=(((((nu1*70)/100)*10000)/10)*8);
+            nu3=(((((nu1*20)/100)*10000)/15)*15);
+            nu4=(((((nu1*10)/100)*10000)/18)*10);
+            System.out.println("Los arboles a sembrar son: "+nu2+" pinos,"+nu3+" eucaliptos"+" y "+nu4+" cedros");
+        }
+        else
+        if(nu1<=1000000)
+        {
+            nu2=(((((nu1*50)/100)*10000)/10)*8);
+            nu3=(((((nu1*30)/100)*10000)/15)*15);
+            nu4=(((((nu1*20)/100)*10000)/18)*10);
+            System.out.println("Los arboles a sembrar son: "+nu2+" pinos,"+nu3+" eucaliptos"+" y "+nu4+" cedros");
+        }
+        else
+        if(nu1<0)
+        {
+            System.out.println("El numero de hectarias es incorrecto");
+        }
+    }
+    public void getsetpolimorfismo12()
+    {
+        System.out.println("ingrese el primer numero");
+        num1 = sn.nextInt();
+        System.out.println("ingrese el segundo numero numero");
+        num2 = sn.nextInt();
+        if(num1==num2)
+        {
+            num3=num1*num2;
+            System.out.println("La multiplicasion entre los dos numeros es: "+num3);
+        }
+        else
+        if(num1>num2)
+        {
+            num3=num1-num2;
+            System.out.println("La resta entre los dos numeros es: "+num3);
+        }
+        else
+        if(num1<num2)
+        {
+            num3=num1+num2;
+            System.out.println("La suma entre los dos numeros es: "+num3);
+        } 
+    }
+    public void getsetpolimorfismo13()
+    {
+        System.out.println("Ingrese el valor de la hora normal trabajada");
+        num1=sn.nextInt();
+        System.out.println("Ingrese el numero de horas trabajadas");
+        num2=sn.nextInt();
+        if((num2>40)&&(num2<=48))
+        {
+            num5=num2-40;
+            num4=((num1*num5)*2);
+            System.out.println("el total a pagar por horas estras trabajadas es de: "+num4);
+        }
+        else
+        if(num2>48)
+        {
+            num5=num2-40;
+            num3=num5-8;
+            num4=((num1*8)*2)+((num1*num3)*3);
+            System.out.println("el total a pagar por horas estras trabajadas es de: "+num4);
+        }       
+    }
+    public void getsetpolimorfismo14()
+    {
+        System.out.println("Ingrese el valor del salario");
+        num1=sn.nextInt();
+        System.out.println("Ingrese el numero de meses trabajados");
+        num2=sn.nextInt(); 
+        if(num2<12)
+        {
+            n3=(num1*5)/100;
+            System.out.println("La utilidad que recibira el trabajador es de:"+n3);
+        }
+        else
+        if((num2>=12)&&(num2<48))
+        {
+            n3=(num1*7.5)/100;
+            System.out.println("La utilidad que recibira el trabajador es de:"+n3);
+        }
+        else
+        if((num2>=48)&&(num2<=60))
+        {
+            n3=(num1*10)/100;
+            System.out.println("La utilidad que recibira el trabajador es de:"+n3);
+        }
+        else
+        if((num2>60)&&(num2<120))
+        {
+            n3=(num1*15)/100;
+            System.out.println("La utilidad que recibira el trabajador es de:"+n3);
+        }
+        else
+        if(num2>=120)
+        {
+            n3=(num1*20)/100;
+            System.out.println("La utilidad que recibira el trabajador es de:"+n3);
+        }        
+    }
+
+}

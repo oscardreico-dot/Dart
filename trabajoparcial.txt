@@ -1,0 +1,253 @@
+package trabajoparcial;
+
+public class Trabajoparcial {
+
+   
+    public static void main(String[] args)
+    
+    {
+      herencia tablas =new herencia();
+      herencia fibonacci=new herencia();
+      herencia factorial=new herencia();
+      herencia contarnumeros=new herencia();
+      herencia comparacion=new herencia();
+      tablas.herencia1();
+      fibonacci.herencia2();
+      factorial.herencia3();
+      contarnumeros.herencia4();
+      comparacion.herencia5();
+      constructores comision =new constructores(2000000);
+      constructores salario =new constructores(80,1);
+      constructores descuentos=new constructores(10000,3,"juguete");
+      comision.datos();
+      descuentos.datos1();
+      salario.datos2();
+    }
+    
+}
+package trabajoparcial;
+
+import java.util.Scanner;
+
+
+public class constructores
+{
+    Scanner sn = new Scanner(System.in);
+    double venta,comision;
+    int precio,preciofinal,clave,horas,semanas,trabajada,total,horaext;;
+    String nombre;
+    
+    constructores(double vent)
+    { 
+    this.venta=vent;
+    } 
+    void datos()
+    {
+        if(venta<1000000)
+        {
+            comision=(venta*2.5)/100;
+            System.out.println("el total de la comision es: "+ comision);
+        }
+        else
+        if((venta>=1000000)&&(venta<3000000))   
+        {
+            comision=(venta*3)/100;
+            System.out.println("el total de la comision es: "+ comision);
+        }
+        else
+         if((venta>=3000000)&&(venta<5000000))   
+        {
+            comision=(venta*4.5)/100;
+            System.out.println("el total de la comision es: "+ comision);
+        }
+        else
+        if(venta>=5000000)
+        {
+            comision=(venta*5)/100;
+            System.out.println("el total de la comision es: "+ comision);
+        }
+    }
+    constructores(int pre,int clav,String nomb)
+    {
+        this.precio=pre;
+       
+        this.clave=clav;
+        this.nombre=nomb;
+    }
+    void datos1()
+    {
+        if ((clave>3)||(clave<0))
+       {
+           System.out.println("la clave es incorrecta");
+       }
+       else
+       if(clave==0)
+       {
+           System.out.println("clave No. "+clave+"."+ "\nel producto con el nombre "+nombre+ "\ncon valor de: "+precio+ "pesos"+"\nel producto no tiene descuento");
+       }
+       else
+       if(clave==1)
+       {
+           preciofinal=(precio*10)/100;
+           System.out.println("clave No. "+clave+"."+ "\nel producto con el nombre "+nombre+"\ncon valor de: "+precio+ "pesos"+"\ntiene un descuento de: "+preciofinal+ "pesos");
+       }
+        else
+       if(clave==2)
+       {
+           preciofinal=(precio*20)/100;
+           System.out.println("clave No. "+clave+"."+ "\nel producto con el nombre "+nombre+"\ncon valor de: "+precio+ "pesos"+"\ntiene un descuento de: "+preciofinal+ "pesos");
+           
+       }
+        else
+       if(clave==3)
+       {
+           preciofinal=(precio*25)/100;
+           System.out.println("clave No. "+clave+"."+ "\nel producto con el nombre "+nombre+"\ncon valor de: "+precio+ "pesos"+"\ntiene un descuento de: "+preciofinal +"pesos");
+          
+       }
+    }
+    constructores(int h,int sema)
+    {
+        this.horas=h;
+        this.semanas=sema;
+    }
+    void datos2()
+    {
+        if(horas<=40)
+        {
+            total=(horas*10000)*semanas;
+            System.out.println("el total a pagar es de: "+total);
+        }
+        else
+        if(horas>40)
+        {
+            trabajada=40*10000;
+            horas=horas-40;
+            total=(horas*15000)+trabajada;
+            horaext=total*semanas;
+            System.out.println("el total a pagar es de: "+horaext+"\nlas horas extras fueron: "+horas);
+        }
+    }
+}
+package trabajoparcial;
+
+import java.util.Scanner;
+
+public class herencia
+{
+    public herencia (){}
+    Scanner sn = new Scanner(System.in);
+    int suma,limite,num;
+    int cantidad=0,pares=0,num1 = 0,num2 = 1,resu=1;
+    int valor1,valor2,valor3,valor4,valor5;
+    public void herencia1()
+    {
+        System.out.println("ingrese numero de la tabla");
+        num1 = sn.nextInt();
+        System.out.println("Tabla del " + num1);
+        for(int j = 1; j<=10; j++)
+        {
+        System.out.println(num1 + " * " + j + " = " + num1*j);
+        }
+    }
+    public void herencia2()
+    {
+        System.out.println("ingrese la catidad de numeros que quiere conocer");
+        limite = sn.nextInt();
+        for(int i=0;i<=limite;i++) 
+        {
+        suma = num1;
+        num1 = num2;
+        num2 = suma + num1;
+        System.out.println(" EL numero es"+suma);
+        }
+
+    }
+    public void herencia3()
+    {
+        System.out.println("digite un nemero entero");
+        num = sn.nextInt();
+        resu=1;
+        for(int i = 1; i<=num; i++)
+        {
+            resu=resu*i;
+        }
+        System.out.println("el factorial es: " + resu);
+    }
+    public void herencia4()
+    {
+        System.out.print("Introduce el primer numero ");
+        num1=sn.nextInt();
+        System.out.print("Introduce el segundo numero ");
+        num=sn.nextInt();
+        if(num1<num2)
+        {
+            for(int i=num1;i<=num;i++)
+            {
+                System.out.println("Numero:"+i);
+                cantidad++;
+                if((i%2)==0)
+                {
+                pares++;
+                }
+            }
+        }
+        else
+        if(num1>num2)
+        {
+           for(int i=num2;i<=num1;i++)
+            {
+                System.out.println("Numero:"+i);
+                cantidad++;
+                if((i%2)==0)
+                {
+                pares++;
+                }
+            }
+        }
+        System.out.println("Hay: "+cantidad +" numeros");
+        System.out.println("De los cuales : "+pares+" son pares");
+    }
+    public void herencia5()
+    {
+        System.out.println("Ingrese el primer valor");
+        valor1 = sn.nextInt();
+        System.out.println("Ingrese el segundo valor");
+        valor2 = sn.nextInt();
+        System.out.println("Ingrese el tercer valor");
+        valor3 = sn.nextInt();
+        System.out.println("Ingrese el cuarto valor");
+        valor4 = sn.nextInt();
+        System.out.println("Ingrese el quinto valor");
+        valor5 = sn.nextInt();
+        if((valor1>valor2)&&(valor1>valor3)&&(valor1>valor4)&&(valor1>valor5)&&(valor5<valor2)&&(valor5<valor3)&&(valor5<valor4)&&(valor5<valor1))
+        {
+           System.out.println("El Numero Mayor es : "+valor1); 
+           System.out.println("El Numero Menor es : "+valor5);
+        }
+        else
+        if((valor2>valor1)&&(valor2>valor3)&&(valor2>valor4)&&(valor2>valor5)&&(valor5<valor2)&&(valor5<valor3)&&(valor5<valor4)&&(valor5<valor1))
+        {
+                    System.out.println("El Numero Mayor es : "+valor2); 
+                    System.out.println("El Numero Menor es : "+valor5);
+        }
+        else
+         if((valor3>valor1)&&(valor3>valor2)&&(valor3>valor4)&&(valor3>valor5)&&(valor5<valor2)&&(valor5<valor3)&&(valor5<valor4)&&(valor5<valor1))
+        {
+                    System.out.println("El Numero Mayor es : "+valor3); 
+                    System.out.println("El Numero Menor es : "+valor5);
+        }
+         else
+         if((valor4>valor1)&&(valor4>valor2)&&(valor4>valor3)&&(valor4>valor5)&&(valor5<valor2)&&(valor5<valor3)&&(valor5<valor4)&&(valor5<valor1))
+        {
+                    System.out.println("El Numero Mayor es : "+valor4); 
+                    System.out.println("El Numero Menor es : "+valor5);
+        }
+         else
+        if((valor5>valor1)&&(valor5>valor2)&&(valor5>valor3)&&(valor5>valor4)&&(valor1<valor2)&&(valor1<valor3)&&(valor1<valor4)&&(valor1<valor5))
+        {
+                    System.out.println("El Numero Mayor es : "+valor5); 
+                    System.out.println("El Numero Menor es : "+valor1);
+        }   
+    }
+}
